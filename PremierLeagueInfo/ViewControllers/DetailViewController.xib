@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="PremierLeagueInfo" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingImage" destination="zX8-bS-Ouj" id="HjL-9d-I1Z"/>
+                <outlet property="socialFacebookButton" destination="Chv-SV-c8I" id="vs1-Gk-cYY"/>
+                <outlet property="socialInstagramButton" destination="VZI-Eh-cJR" id="EDM-6h-TBF"/>
+                <outlet property="socialTwitterButton" destination="8Vp-J6-bS5" id="x8c-u4-PYK"/>
+                <outlet property="teamBannerImage" destination="NUb-2w-VtB" id="prf-M0-Lnp"/>
+                <outlet property="teamDetailLabel" destination="hGI-zW-Rb4" id="1fZ-dn-eyJ"/>
+                <outlet property="teamTitleLabel" destination="yab-lm-hBe" id="dsG-qo-Ck9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCJ-qb-Mv3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51c-3s-UJT">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92K-JV-Ree" userLabel="Image Banner">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NUb-2w-VtB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="england" translatesAutoresizingMaskIntoConstraints="NO" id="L4D-nS-m9w">
+                                            <rect key="frame" x="315" y="140" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="dWt-so-e7D"/>
+                                                <constraint firstAttribute="width" constant="40" id="hOD-hw-WHU"/>
+                                            </constraints>
+                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zX8-bS-Ouj">
+                                            <rect key="frame" x="169" y="81.5" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="zX8-bS-Ouj" firstAttribute="centerY" secondItem="92K-JV-Ree" secondAttribute="centerY" id="DZJ-dI-HMs"/>
+                                        <constraint firstAttribute="height" constant="200" id="GQ9-YL-sdb"/>
+                                        <constraint firstAttribute="trailing" secondItem="NUb-2w-VtB" secondAttribute="trailing" id="H5W-vW-a7F"/>
+                                        <constraint firstAttribute="bottom" secondItem="NUb-2w-VtB" secondAttribute="bottom" id="Rhm-nC-n9d"/>
+                                        <constraint firstAttribute="trailing" secondItem="L4D-nS-m9w" secondAttribute="trailing" constant="20" id="YDX-ej-0tj"/>
+                                        <constraint firstItem="zX8-bS-Ouj" firstAttribute="centerX" secondItem="92K-JV-Ree" secondAttribute="centerX" id="YKD-vu-T7P"/>
+                                        <constraint firstItem="NUb-2w-VtB" firstAttribute="leading" secondItem="92K-JV-Ree" secondAttribute="leading" id="kAd-E5-3hP"/>
+                                        <constraint firstItem="NUb-2w-VtB" firstAttribute="top" secondItem="92K-JV-Ree" secondAttribute="top" id="qP0-bx-syR"/>
+                                        <constraint firstAttribute="bottom" secondItem="L4D-nS-m9w" secondAttribute="bottom" constant="20" id="yd5-Ae-ffd"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yab-lm-hBe">
+                                    <rect key="frame" x="16" y="216" width="343" height="24"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGI-zW-Rb4">
+                                    <rect key="frame" x="16" y="256" width="343" height="18"/>
+                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EuX-xI-zpm">
+                                    <rect key="frame" x="16" y="290" width="343" height="84"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7iN-Or-r5H">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-aB-rNK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="g7t-CP-oy5"/>
+                                                        <constraint firstAttribute="height" constant="20" id="rOr-AF-dsI"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chv-SV-c8I">
+                                                    <rect key="frame" x="30" y="0.0" width="313" height="20"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="www.facebook.com/Arsenal">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1KT-bh-0Dv">
+                                            <rect key="frame" x="0.0" y="32" width="343" height="20"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="yTu-8A-G9V">
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="MgS-FL-vbb"/>
+                                                        <constraint firstAttribute="width" constant="20" id="ld1-6X-cnf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vp-J6-bS5">
+                                                    <rect key="frame" x="30" y="0.0" width="313" height="20"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="twitter.com/arsenal">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vDu-6L-lFu">
+                                            <rect key="frame" x="0.0" y="64" width="343" height="20"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram" translatesAutoresizingMaskIntoConstraints="NO" id="lUf-fd-avX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="JYn-Gp-kuJ"/>
+                                                        <constraint firstAttribute="height" constant="20" id="NyT-KY-VEh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZI-Eh-cJR">
+                                                    <rect key="frame" x="30" y="0.0" width="313" height="20"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="instagram.com/arsenal">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="yab-lm-hBe" firstAttribute="leading" secondItem="51c-3s-UJT" secondAttribute="leading" constant="16" id="3mC-io-lIz"/>
+                                <constraint firstItem="92K-JV-Ree" firstAttribute="leading" secondItem="51c-3s-UJT" secondAttribute="leading" id="9fS-wZ-4Lj"/>
+                                <constraint firstItem="hGI-zW-Rb4" firstAttribute="leading" secondItem="51c-3s-UJT" secondAttribute="leading" constant="16" id="B8D-EC-uO9"/>
+                                <constraint firstItem="EuX-xI-zpm" firstAttribute="top" secondItem="hGI-zW-Rb4" secondAttribute="bottom" constant="16" id="OXD-75-Hid"/>
+                                <constraint firstAttribute="trailing" secondItem="hGI-zW-Rb4" secondAttribute="trailing" constant="16" id="QoF-9Y-AM3"/>
+                                <constraint firstItem="hGI-zW-Rb4" firstAttribute="top" secondItem="yab-lm-hBe" secondAttribute="bottom" constant="16" id="YKT-9R-3hO"/>
+                                <constraint firstAttribute="bottom" secondItem="EuX-xI-zpm" secondAttribute="bottom" constant="16" id="aE3-7r-M3G"/>
+                                <constraint firstItem="92K-JV-Ree" firstAttribute="top" secondItem="51c-3s-UJT" secondAttribute="top" id="bGb-Uw-aRO"/>
+                                <constraint firstAttribute="trailing" secondItem="EuX-xI-zpm" secondAttribute="trailing" constant="16" id="ePi-NU-CvU"/>
+                                <constraint firstAttribute="trailing" secondItem="yab-lm-hBe" secondAttribute="trailing" constant="16" id="gIb-Pn-uui"/>
+                                <constraint firstItem="EuX-xI-zpm" firstAttribute="leading" secondItem="51c-3s-UJT" secondAttribute="leading" constant="16" id="m8e-0B-E5A"/>
+                                <constraint firstAttribute="trailing" secondItem="92K-JV-Ree" secondAttribute="trailing" id="ppy-bQ-7eZ"/>
+                                <constraint firstItem="yab-lm-hBe" firstAttribute="top" secondItem="92K-JV-Ree" secondAttribute="bottom" constant="16" id="w7o-8E-fOy"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="51c-3s-UJT" secondAttribute="trailing" id="4F7-wo-z9q"/>
+                        <constraint firstItem="51c-3s-UJT" firstAttribute="leading" secondItem="CCJ-qb-Mv3" secondAttribute="leading" id="56y-I7-nBC"/>
+                        <constraint firstAttribute="bottom" secondItem="51c-3s-UJT" secondAttribute="bottom" id="gwn-55-QjG"/>
+                        <constraint firstItem="51c-3s-UJT" firstAttribute="top" secondItem="CCJ-qb-Mv3" secondAttribute="top" id="kjt-1f-fue"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CCJ-qb-Mv3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5lE-Ap-TEb"/>
+                <constraint firstItem="51c-3s-UJT" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="7Jd-8E-EqP"/>
+                <constraint firstItem="CCJ-qb-Mv3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="N9R-H6-Cq9"/>
+                <constraint firstItem="CCJ-qb-Mv3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QtQ-t6-czH"/>
+                <constraint firstItem="CCJ-qb-Mv3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="yHq-YQ-Srk"/>
+            </constraints>
+            <point key="canvasLocation" x="108" y="141.67916041979012"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="england" width="170.5" height="170.5"/>
+        <image name="facebook" width="170.5" height="170.5"/>
+        <image name="instagram" width="170.5" height="170.5"/>
+        <image name="twitter" width="170.5" height="170.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
